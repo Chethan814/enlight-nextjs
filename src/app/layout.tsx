@@ -11,6 +11,8 @@ import '../../public/assets/css/magnific-popup.css'
 import '../../public/assets/css/slick.css'
 import '../../public/assets/css/swiper-bundle.min.css'
 import '../../public/css/app.css'
+
+
 import Wrapper from './components/layout/mainLayout/wrapper'    
 
 const geistSans = Geist({
