@@ -9,7 +9,7 @@ import FloatingBtn from '../clientLayout/FloatingBtn';
 const Preloader = dynamic(() => import('../clientLayout/Preloader'), { ssr: false });
 const Header = dynamic(() => import('../clientLayout/Header'), { ssr: false });
 
-export default function wrapper({
+export default function Wrapper({
   children,
 }: {
   children: React.ReactNode;
