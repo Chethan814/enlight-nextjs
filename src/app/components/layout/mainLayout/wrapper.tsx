@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Script from 'next/script';
 import Footer from '../clientLayout/Footer';
 import FloatingBtn from '../clientLayout/FloatingBtn';
 
