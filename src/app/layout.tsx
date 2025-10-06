@@ -2,33 +2,27 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from 'next/script'
 import "./globals.css";
-
-// Base CSS
-import '../../public/assets/css/bootstrap.min.css'
+import '../../public/assets/css/style.css'
 import '../../public/assets/css/animate.min.css'
 import '../../public/assets/css/aos.min.css'
+import '../../public/assets/css/bootstrap.min.css'
 import '../../public/assets/css/icofont.min.css'
 import '../../public/assets/css/magnific-popup.css'
 import '../../public/assets/css/slick.css'
 import '../../public/assets/css/swiper-bundle.min.css'
-import '../../public/assets/css/style.css'
-
-// Custom CSS (loads last to take precedence)
 import '../../public/css/app.css'
 
+import Head from 'next/head';
 import Wrapper from './components/layout/mainLayout/wrapper'    
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -68,6 +62,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/animate.min.css" />
+        <link rel="stylesheet" href="/assets/css/aos.min.css" />
+        <link rel="stylesheet" href="/assets/css/icofont.min.css" />
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="/assets/css/slick.css" />
+        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/assets/css/app.css" />
+      </Head> 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
