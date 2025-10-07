@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+.no-swiper .swiper,
+.no-swiper .swiper-wrapper,
+.no-swiper .swiper-slide {
+  all: unset !important;
+}
