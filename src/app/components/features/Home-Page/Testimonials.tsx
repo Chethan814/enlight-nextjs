@@ -53,7 +53,7 @@ const Testimonials = () => {
     },
   ];
 
-  const truncateContent = (text : any, length = 150) => {
+  const truncateContent = (text: string, length = 150) => {
     return text.length > length ? text.slice(0, length) + "..." : text;
   };
 
