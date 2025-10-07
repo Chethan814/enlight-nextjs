@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState, useRef } from 'react'
-import Image from 'next/image'
 
 import HeroBanner from './components/features/Home-Page/HeroBanner'
 import NewsNotices from './components/features/Home-Page/NewsNotices'

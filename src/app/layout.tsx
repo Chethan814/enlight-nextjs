@@ -5,7 +5,6 @@ import "./globals.css";
 import '../../public/assets/css/style.css'
 import '../../public/assets/css/animate.min.css'
 import '../../public/assets/css/aos.min.css'
-// import '../../public/assets/css/bootstrap.min.css'
 import '../../public/assets/css/icofont.min.css'
 import '../../public/assets/css/magnific-popup.css'
 import '../../public/assets/css/slick.css'
@@ -65,15 +64,7 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/favicon.ico" />
 
-        {/* <link rel="stylesheet" href="/assets/css/bootstrap.min.css" /> */}
-        <link rel="stylesheet" href="/assets/css/style.css" />
-        <link rel="stylesheet" href="/assets/css/animate.min.css" />
-        <link rel="stylesheet" href="/assets/css/aos.min.css" />
-        <link rel="stylesheet" href="/assets/css/icofont.min.css" />
-        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
-        <link rel="stylesheet" href="/assets/css/slick.css" />
-        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
-        {/* <link rel="stylesheet" href="/assets/css/app.css" /> */}
+        
       </Head> 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
