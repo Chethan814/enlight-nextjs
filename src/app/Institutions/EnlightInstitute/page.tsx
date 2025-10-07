@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import BrandArea from '@/app/components/features/Home-Page/BrandArea';
 import Breadcrumb from '@/app/components/common/Breadcrumb';
 
 export const metadata: Metadata = {

@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaUser, FaEdit, FaPhoneAlt, FaPaperPlane } from 'react-icons/fa';
 import Breadcrumb from '../components/common/Breadcrumb';
 

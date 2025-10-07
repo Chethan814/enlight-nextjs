@@ -1,6 +1,5 @@
 // app/about/principal-desk/page.tsx
 import Image from 'next/image';
-import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumb from '@/app/components/common/Breadcrumb';
 
