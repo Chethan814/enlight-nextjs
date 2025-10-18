@@ -95,18 +95,18 @@ const Header = () => {
 
       {/* Main Header */}
       <header>
-        <div className={`headerarea headerarea__3 header__sticky ${pathname === '/' ? '' : 'header__area'}`}>
+        <div className={`headerarea headerarea__3 header__sticky header__area`}>
           <div className="container desktop__menu__wrapper">
             <div className="row">
               <div className="col-xl-2 col-lg-2 col-md-6">
                 <div className="headerarea__left">
-                  <div className="headerarea__left__logo">
+                  <div className="headerarea__left__logo ">
                     <Link href="/">
                       <Image
                         src="/assets/img/logo/enlight-group-logo.png"
                         alt="Enlight Group of Institutions"
-                        width={180}
-                        height={60}
+                        fill
+                        className='main-logo !w-[320px] !h-[90px] !object-contain '
                         priority
                       />
                     </Link>
@@ -166,8 +166,8 @@ const Header = () => {
                     <Image
                       src="/assets/img/logo/enlight-group-logo.png"
                       alt="Enlight Group"
-                      width={150}
-                      height={50}
+                      fill
+                      className='main-logo !w-[20rem] !h-[20rem] !translate-y-[9px] !translate-x-[16px] !object-contain '
                       priority
                     />
                   </Link>
