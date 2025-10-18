@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import TopBar from './TopBar';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,8 +26,17 @@ const Header = () => {
     setIsAccountMenuOpen(!isAccountMenuOpen);
   };
 
+  // Define navigation item type
+  type NavItem = {
+    name: string;
+    path: string;
+    external?: boolean;
+    download?: boolean;
+    submenu?: NavItem[];
+  };
+
   // Navigation items
-  const navItems = [
+  const navItems: NavItem[] = [
     { name: 'Home', path: '/' },
     {
       name: 'About Us',
@@ -51,9 +61,9 @@ const Header = () => {
       path: '#',
       submenu: [
         { name: 'Enquiry Now', path: '/Forms/Enquiry-Form', external: true },
-        { name: 'Online Admission', path: '#', external: true },
-        { name: 'Prospectus Download', path: '/download-pdf' },
-        { name: 'Application Form', path: '/Forms/Enlight-Admission' }
+        { name: 'Online Admission', path: '/Forms/Enlight-Admission', external: true },
+        { name: 'Prospectus Download', path: '/assets/Sowrabha-Prospectus.pdf', external: true, download: true },
+        { name: 'Application Form', path: '/assets/PDF/Enlight Final 2025.pdf', external: true, download: true }
       ]
     },
     {
@@ -81,86 +91,7 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="topbararea">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-6 col-lg-6">
-              <div className="topbar__left">
-                <ul>
-                  <li>
-                    <i className="icofont-phone"></i> +91-8029556773
-                  </li>
-                  <li>
-                    <i className="icofont-email ms-2"></i> infoenlightnursing@gmail.com
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="topbar__right">
-                <div className="topbar__text">
-                  <div className="row justify-content-end">
-                    <div className="col-sm-auto">
-                      <div className="login-buttons">
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://enlight.eduwego.in/student-login"
-                          className="default__small__button__white mb-0 rounded p-1"
-                        >
-                          <i className="icofont-user-alt-1"></i>Student Login
-                        </a>
-                        <span className="text-white ms-1">|</span>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="#"
-                          className="default__small__button__white mb-0 rounded p-1 ms-1"
-                        >
-                          <i className="icofont-file-document me-1"></i>Online Admission
-                        </a>
-                        <span className="text-white ms-1">|</span>
-                        <a
-                          href="https://enlight-enquiry-form.vercel.app"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="default__small__button__white mb-0 rounded p-1 ms-1"
-                        >
-                          Enquiry Now
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="topbar__list">
-                  <ul>
-                    <li>
-                      <a href="https://www.facebook.com/sovamjamatiaofficial" target="_blank" rel="noopener noreferrer" title="Facebook">
-                        <i className="icofont-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://x.com/of_enlight?t=IIT52UV_BZ1hzOkmeuhHGQ&s=08" target="_blank" rel="noopener noreferrer" title="Twitter">
-                        <i className="icofont-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/enlightgroupofinstitutions2024/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                        <i className="icofont-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.youtube.com/@enlightgroupofinstitutions8290" target="_blank" rel="noopener noreferrer" title="Youtube">
-                        <i className="icofont-youtube"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <TopBar />
 
       {/* Main Header */}
       <header>
@@ -392,7 +323,7 @@ const Header = () => {
         <div className="theme__shadow__circle shadow__right"></div>
       </div>
 
-      
+
     </>
   );
 };
