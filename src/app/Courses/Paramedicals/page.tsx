@@ -16,7 +16,7 @@ const paramedicalCourses = [
     seats: "40 seats",
     image: "/assets/img/service/facility-16.jpg",
     description: "DMLT is a two years course. A professional with DMLT examines and analyzes different body...",
-    link: "/diploma-in-medical-laboratory-technology-dmlt",
+    link: "/Courses/Paramedicals/DMLT",
     badgeClass: "blue__color"
   },
   {
@@ -26,7 +26,7 @@ const paramedicalCourses = [
     seats: "20 seats",
     image: "/assets/img/courses/dmxt.jpg",
     description: "DMXT is an undergraduate radiology course and is all about how electromagnetic...",
-    link: "/diploma-in-medical-imaging-x-ray-technology-dmxt",
+    link: "/Courses/Paramedicals/DMXT",
     badgeClass: "blue__color"
   },
   {
@@ -36,7 +36,7 @@ const paramedicalCourses = [
     seats: "20 seats",
     image: "/assets/img/courses/dmot.jpg",
     description: "DMOT is a two-year diploma program designed to create trained and qualified professionals...",
-    link: "/diploma-in-medical-operation-technology-dmot",
+    link: "/Courses/Paramedicals/DMOT",
     badgeClass: "blue__color"
   },
   {
@@ -46,7 +46,7 @@ const paramedicalCourses = [
     seats: "20 seats",
     image: "/assets/img/service/facility-9.jpg",
     description: "DOT/DAT leads the students to a comprehensive study of the field of...",
-    link: "/diploma-in-medical-anesthesia-technology-dot-dat",
+    link: "/Courses/Paramedicals/DiplomaInMedicalAnesthesia",
     badgeClass: "blue__color"
   }
 ];
