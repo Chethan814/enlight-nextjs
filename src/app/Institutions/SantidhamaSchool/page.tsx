@@ -1,12 +1,11 @@
-// app/school/santidhama-school/page.tsx
-import Image from 'next/image';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import Breadcrumb from '@/app/components/common/Breadcrumb';
+import { Metadata } from "next";
+import Breadcrumb from "@/app/components/common/Breadcrumb";
+import CourseLayout from "@/app/components/features/Institutions-Page/InstitutionsLayout";
 
 export const metadata: Metadata = {
   title: "Sri Shantidhama School of Nursing - Enlight Group of Institutions",
-  description: "Explore professional nursing programs at Sri Shantidhama School of Nursing, offering diploma, bachelor's, and postgraduate degrees in nursing. Affiliated with RGUHS and approved by KNC & INC.",
+  description:
+    "Explore professional nursing programs at Sri Shantidhama School of Nursing, offering diploma, bachelor's, and postgraduate degrees in nursing. Affiliated with RGUHS and approved by KNC & INC.",
 };
 
 const courses = [
@@ -36,162 +35,27 @@ const courses = [
   },
 ];
 
-const SantidhamaSchool = () => {
+export default function SantidhamaSchoolPage() {
   return (
     <>
       {/* Breadcrumb Section */}
-      <Breadcrumb bgImage='/assets/img/infobanner/infobanner-3.jpg' pageName='Sri Shantidhama School Of Nursing' />
+      <Breadcrumb
+        bgImage="/assets/img/infobanner/infobanner-3.jpg"
+        pageName="Sri Shantidhama School Of Nursing"
+      />
 
-      {/* Main Content Section */}
-      <div className="blogarea__2 sp_top_100 sp_bottom_100">
-        <div className="container">
-          <div className="row">
-            {/* Left Content */}
-            <div className="col-xl-8 col-lg-8">
-              <div className="blogarae__img__2 course__details__img__2" data-aos="fade-up">
-                <Image
-                  src="/assets/img/courses/bsc-nursing.jpg"
-                  alt="Sri Shantidhama School of Nursing"
-                  width={800}
-                  height={450}
-                  className="img-fluid rounded"
-                />
-              </div>
-
-              <div className="blog__details__content__wraper">
-                <div className="course__button__wraper" data-aos="fade-up">
-                  <div className="course__button">
-                    <a 
-                      href="/Sowrabha-Prospectus.pdf" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="d-inline-flex align-items-center"
-                    >
-                      <i className="icofont-file-document me-2"></i> Download Prospectus
-                    </a>
-                  </div>
-                  <div className="course__date">
-                    <p>Last Update: <span>May 19, 2024</span></p>
-                  </div>
-                </div>
-
-                <div className="course__details__heading" data-aos="fade-up">
-                  <h3>About Sri Shantidhama School Of Nursing</h3>
-                </div>
-                
-                <div className="course__details__paragraph text-justify" data-aos="fade-up">
-                  <p>
-                    Welcome to Shantidhama College of Nursing. In an era of stiff competition, success can only be achieved if one makes the right kind of endeavor at the right time and in the right direction. Shantidhama College of Nursing has been established with a view to produce qualified and efficient nurses for a new tomorrow in the ever-changing competitive world of today. Given the paradigm shift which the healthcare sector is experiencing, nursing science probably represents the most ideal field for healthcare to innovate for it is a domain where there is a constant need to change with the times and continuously review, analyze and upgrade competencies in the profession. Our primary goal is to offer the best EDUCATION AND CLINICAL TRAINING possible in Nursing. Affiliated to RGUHS and approved by KNC, INC New Delhi & Govt. of Karnataka.
-                  </p>
-                </div>
-
-                <div className="row align-items-center mt-4">
-                  <div className="col-sm-12 col-md-8">
-                    <div className="course__details__wraper" data-aos="fade-up">
-                      <div className="d-flex align-items-center gap-3">
-                        <div className="icon-badge">
-                          <i className="icofont-check-circled text-primary"></i>
-                        </div>
-                        <div>
-                          <h5 className="text-primary mb-1">Approvals</h5>
-                          <p className="mb-0">Indian Nursing Council (INC), Karnataka Nursing Council (KNC)</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-4 mt-3 mt-md-0" data-aos="fade-up">
-                    <a 
-                      href="https://enlight-enquiry-form.vercel.app" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="default__button w-100 text-center d-inline-block"
-                    >
-                      Enquiry Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Sidebar */}
-            <div className="col-xl-4 col-lg-4 mt-5 mt-lg-0">
-              <div className="course__details__sidebar">
-                {/* Courses Offered */}
-                <div className="blogsidebar__content__wraper__2" data-aos="fade-up">
-                  <h4 className="sidebar__title">Courses Offered</h4>
-                  <ul className="course__details__populer__list list-unstyled">
-                    {courses.map((course) => (
-                      <li key={course.id} className="mb-3">
-                        <Link href={course.link} className="d-flex align-items-center text-decoration-none text-dark">
-                          <div className="course__details__populer__img me-3">
-                            <Image
-                              src={course.image}
-                              alt={course.title}
-                              width={90}
-                              height={70}
-                              className="rounded"
-                              style={{ objectFit: 'cover' }}
-                            />
-                          </div>
-                          <div className="course__details__populer__content">
-                            <h6 className="mb-0">{course.title}</h6>
-                          </div>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="course__summery__button mt-4">
-                    <p className="mb-2">Need any help in Admission?</p>
-                    <a 
-                      href="tel:+919916073632" 
-                      className="default__button default__button--3 d-inline-flex align-items-center"
-                    >
-                      <i className="icofont-phone me-2"></i> +91 9916073632
-                    </a>
-                  </div>
-                </div>
-
-                {/* Contact Form */}
-                <div className="blogsidebar__content__wraper__2 mt-4" data-aos="fade-up">
-                  <h4 className="sidebar__title">Get in Touch</h4>
-                  <form className="get__touch__input">
-                    <div className="mb-3">
-                      <input 
-                        type="text" 
-                        className="form-control" 
-                        placeholder="Enter name*" 
-                        required 
-                      />
-                    </div>
-                    <div className="mb-3">
-                      <input 
-                        type="email" 
-                        className="form-control" 
-                        placeholder="Enter your mail*" 
-                        required 
-                      />
-                    </div>
-                    <div className="mb-3">
-                      <textarea 
-                        className="form-control" 
-                        rows={3} 
-                        placeholder="Message*" 
-                        required
-                      ></textarea>
-                    </div>
-                    <button type="submit" className="default__button w-100">
-                      Send Message
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Reusable Course Layout */}
+      <CourseLayout
+        imageSrc="/assets/img/courses/bsc-nursing.jpg"
+        imageAlt="Sri Shantidhama School of Nursing"
+        prospectusLink="/Sowrabha-Prospectus.pdf"
+        lastUpdate="May 19, 2024"
+        heading="About Sri Shantidhama School Of Nursing"
+        description="Welcome to Shantidhama College of Nursing. In an era of stiff competition, success can only be achieved if one makes the right kind of endeavor at the right time and in the right direction. Shantidhama College of Nursing has been established with a view to produce qualified and efficient nurses for a new tomorrow in the ever-changing competitive world of today. Given the paradigm shift which the healthcare sector is experiencing, nursing science probably represents the most ideal field for healthcare to innovate for it is a domain where there is a constant need to change with the times and continuously review, analyze and upgrade competencies in the profession. Our primary goal is to offer the best EDUCATION AND CLINICAL TRAINING possible in Nursing. Affiliated to RGUHS and approved by KNC, INC New Delhi & Govt. of Karnataka."
+        approvals="Indian Nursing Council (INC), Karnataka Nursing Council (KNC)"
+        enquiryLink="https://enlight-enquiry-form.vercel.app"
+        courses={courses}
+      />
     </>
   );
-};
-
-export default SantidhamaSchool;
+}
