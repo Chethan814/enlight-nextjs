@@ -1,8 +1,7 @@
 // app/paramedicals/page.tsx
-import Image from 'next/image';
-import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumb from '@/app/components/common/Breadcrumb';
+import CourseCard from '@/app/components/features/Courses-Page/CourseCard';
 
 export const metadata: Metadata = {
   title: "Paramedical Courses - Enlight Group of Institutions",
@@ -55,70 +54,13 @@ const paramedicalCourses = [
 const Paramedicals = () => {
   return (
     <>
-      {/* Breadcrumb Section */}
       <Breadcrumb bgImage='/assets/img/infobanner/infobanner-6.jpg' pageName='Paramedical Courses' />
-      
 
-      {/* Paramedical Courses Grid */}
       <div className="gridarea sp_bottom_100 sp_top_100">
         <div className="container">
           <div className="row" data-aos="fade-up">
             {paramedicalCourses.map((course) => (
-              <div key={course.id} className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
-                <div className="gridarea__wraper h-100">
-                  <div className="gridarea__img">
-                    <Link href={course.link}>
-                      <Image
-                        src={course.image}
-                        alt={course.title}
-                        width={370}
-                        height={250}
-                        className="img-fluid"
-                        style={{ width: '100%', height: '250px', objectFit: 'cover' }}
-                      />
-                    </Link>
-                    <div className="gridarea__small__button">
-                      <div className={`grid__badge ${course.badgeClass}`}>Paramedical</div>
-                    </div>
-                    <div className="gridarea__small__icon">
-                      <a href="#"><i className="icofont-heart-alt"></i></a>
-                    </div>
-                  </div>
-                  <div className="gridarea__content p-4">
-                    <div className="gridarea__list mb-3">
-                      <ul className="d-flex justify-content-between" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                        <li className="d-flex align-items-center">
-                          <i className="icofont-chair me-2"></i> {course.seats}
-                        </li>
-                        <li>
-                          <div className="d-flex align-items-center">
-                            <i className="icofont-clock-time me-2"></i> {course.duration}
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="gridarea__heading mb-3">
-                      <h3>
-                        <Link href={course.link} className="text-decoration-none" style={{ fontSize: '18px' }}>
-                          {course.title}
-                        </Link>
-                      </h3>
-                    </div>
-                    <div className="mb-4" style={{ minHeight: '60px' }}>
-                      <p className="mb-0">{course.description}</p>
-                    </div>
-                    <div className="gridarea__bottom">
-                      <Link href={course.link} className="text-decoration-none">
-                        <div className="gridarea__small__img">
-                          <div className="gridarea__small__content ms-0">
-                            <h6>Apply Now <i className="icofont-long-arrow-right"></i></h6>
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CourseCard key={course.id} course={course} />
             ))}
           </div>
         </div>

@@ -17,7 +17,7 @@ const nursingPrograms = [
     seats: "20 seats left",
     image: "/assets/img/courses/course-6.jpg",
     description: "GNM referred to as General Nursing and Midwifery deals with the education of nurses in general health care, nursing, and...",
-    link: "/GnmNursing"
+    link: "/Courses/Nursing/GNMNursing"
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const nursingPrograms = [
     seats: "20 seats left",
     image: "/assets/img/courses/course-1.jpg",
     description: "The course of study shall extend over 4 academic years from the date of commencement of his/ her study of...",
-    link: "/bScNursing"
+    link: "/Courses/Nursing/bScNursing"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const nursingPrograms = [
     seats: "20 seats left",
     image: "/assets/img/courses/course-2.jpg",
     description: "MSc Nursing will prepare Nurses, to improve the quality of nursing education and practice, in India. It will build upon...",
-    link: "/MSCNursing"
+    link: "/Courses/Nursing/MSCNursing"
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const nursingPrograms = [
     seats: "20 seats left",
     image: "/assets/img/courses/course-5.jpg",
     description: "The B.Sc Nursing (Post certificate) course of study shall extend over a period of 2 academic years from the date...",
-    link: "/PbbscNursing"
+    link: "/Courses/Nursing/PBBSCNursing" 
   }
 ];
 
