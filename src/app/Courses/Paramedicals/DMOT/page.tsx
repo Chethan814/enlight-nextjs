@@ -9,7 +9,7 @@ const otherCourses = [
 export default function DMOT() {
   return (
     <CourseLayout
-      breadcrumbBg="/assets/img/infobanner/infobanner-2.jpg"
+      breadcrumbBg="/assets/img/infobanner/infobanner-5.jpg"
       pageName="Diploma in Medical Operation Technology (DMOT)"
       mainImage="/assets/img/courses/dmot.jpg"
       mainImageAlt="Diploma in Medical Operation Technology"
@@ -22,7 +22,7 @@ export default function DMOT() {
       duration="2 Years"
       applyLink="https://enlight-admission-form.vercel.app"
       enquiryLink="https://enlight-enquiry-form.vercel.app"
-      documents={['10th / 12th Marksheet', '10th / 12th Admit Card', 'Aadhar Copy', 'Migration Certificate']}
+      documents={['10th / 12th Marksheet', '10th / 12th Admit Card', 'Aadhar Copy', 'Migration Certificate' ,'12 Pic Colour Passport size Photo']}
       otherCourses={otherCourses}
     />
   );

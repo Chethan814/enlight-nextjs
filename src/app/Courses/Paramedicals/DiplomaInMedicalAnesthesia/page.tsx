@@ -22,7 +22,7 @@ export default function DiplomaInMedicalAnesthesia() {
       duration="2 Years"
       applyLink="https://enlight-admission-form.vercel.app"
       enquiryLink="https://enlight-enquiry-form.vercel.app"
-      documents={['10th / 12th Marksheet', '10th / 12th Admit Card', 'Aadhar Copy', 'Migration Certificate']}
+      documents={['10th / 12th Marksheet', '10th / 12th Admit Card', 'Aadhar Copy', 'Migration Certificate' ,'12 Pic Colour Passport size Photo']}
       otherCourses={otherCourses}
     />
   );

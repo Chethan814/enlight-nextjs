@@ -10,16 +10,21 @@ interface Course {
   image: string;
   description: string;
   link: string;
-  badgeClass: string;
 }
 
 interface CourseCardProps {
   course: Course;
+  badgeText?: string;  // "Paramedical" or "Nursing"
+  colClass?: string;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ course, badgeText = "Course", colClass = "col-xl-4" }) => {
+
+  // Define colors based on badgeText
+  const badgeColor = badgeText === "Nursing" ? " " : "blue__color";
+
   return (
-    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+    <div className={`${colClass} col-lg-4 col-md-6 col-sm-6 col-12 mb-4`}>
       <div className="gridarea__wraper h-100">
         <div className="gridarea__img">
           <Link href={course.link}>
@@ -33,23 +38,17 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
             />
           </Link>
           <div className="gridarea__small__button">
-            <div className={`grid__badge ${course.badgeClass}`}>Paramedical</div>
+            <div className={`grid__badge ${badgeColor}`}>
+              {badgeText}
+            </div>
           </div>
-          <div className="gridarea__small__icon">
-            <a href="#"><i className="icofont-heart-alt"></i></a>
-          </div>
+         
         </div>
         <div className="gridarea__content p-4">
           <div className="gridarea__list mb-3">
             <ul className="d-flex justify-content-between" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li className="d-flex align-items-center">
-                <i className="icofont-chair me-2"></i> {course.seats}
-              </li>
-              <li>
-                <div className="d-flex align-items-center">
-                  <i className="icofont-clock-time me-2"></i> {course.duration}
-                </div>
-              </li>
+              <li className="d-flex align-items-center"><i className="icofont-chair me-2"></i> {course.seats}</li>
+              <li className="d-flex align-items-center"><i className="icofont-clock-time me-2"></i> {course.duration}</li>
             </ul>
           </div>
           <div className="gridarea__heading mb-3">

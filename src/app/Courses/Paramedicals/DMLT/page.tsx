@@ -9,7 +9,7 @@ const otherCourses = [
 export default function DMLT() {
   return (
     <CourseLayout
-      breadcrumbBg="/assets/img/infobanner/infobanner-2.jpg"
+      breadcrumbBg="/assets/img/infobanner/infobanner-4.jpg"
       pageName="Diploma in Medical Laboratory Technology (DMLT)"
       mainImage="/assets/img/service/facility-16.jpg"
       mainImageAlt="Diploma in Medical Laboratory Technology"
@@ -22,7 +22,7 @@ export default function DMLT() {
       duration="2 Years"
       applyLink="https://enlight-admission-form.vercel.app"
       enquiryLink="https://enlight-enquiry-form.vercel.app"
-      documents={['10th / 12th Marksheet', '10th / 12th Admit Card', 'Aadhar Copy', 'Migration Certificate']}
+      documents={['10th / 12th Marksheet', '10th / 12th Admit Card', 'Aadhar Copy', 'Migration Certificate' ,'12 Pic Colour Passport size Photo']}
       otherCourses={otherCourses}
     />
   );
