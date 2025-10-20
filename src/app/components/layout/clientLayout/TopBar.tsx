@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
-import { FaPhone, FaEnvelope, FaUserAlt, FaFileAlt } from 'react-icons/fa';
-import { FaXTwitter, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa6';
+// import { FaPhone, FaEnvelope, FaUserAlt, FaFileAlt } from 'react-icons/fa';
+// import { FaXTwitter, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa6';
 
 const TopBar: React.FC = () => {
   return (

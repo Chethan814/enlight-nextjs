@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function ApplicationForm() {
   const [total, setTotal] = useState(0);
   const [percentage, setPercentage] = useState("0%");
-  const [today, setToday] = useState("");
+  const [ , setToday] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
 

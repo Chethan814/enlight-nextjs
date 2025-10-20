@@ -205,7 +205,7 @@ const Header = () => {
             <div className="mobile-navigation">
               <nav>
                 <ul className="mobile-menu">
-                  {navItems.map((item, index) => (
+                  {navItems.map((item) => (
                     <li
                       key={`mobile-${item.name}`}
                       className={item.submenu ? 'menu-item-has-children' : ''}

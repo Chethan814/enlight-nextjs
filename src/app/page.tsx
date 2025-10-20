@@ -11,7 +11,7 @@ import BrandArea from './components/features/Home-Page/BrandArea'
 import AboutArea from './components/features/Home-Page/AboutArea'
 import AnimatedContent from './components/features/Home-Page/AnimatedContent'
 import Testimonials from './components/features/Home-Page/Testimonials'
-import { GalleryGrid } from './components/features/Campus-Page/GalleryGrid'
+// import { GalleryGrid } from './components/features/Campus-Page/GalleryGrid'
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false)
