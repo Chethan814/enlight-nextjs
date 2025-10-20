@@ -6,7 +6,7 @@ interface BreadcrumbProps {
     bgImage: string;
     pageName: string;
 }
-
+ 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ bgImage, pageName }) => {
     return (
         <div
