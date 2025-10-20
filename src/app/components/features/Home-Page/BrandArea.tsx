@@ -9,7 +9,7 @@ const BrandArea: React.FC = () => {
 
   return (
     <div className="brandarea sp_bottom_60" >
-      <div className="container" style={{translate:"2rem 0" }}>
+      <div className="container" style={{translate:"0.5rem 0" }}>
         <div className="row">
           <div className="col-xl-12" data-aos="fade-up">
             <div className="section__title text-center">

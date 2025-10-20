@@ -76,7 +76,7 @@ const HeroBanner = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                minHeight: '80vh',
+                minHeight: '60vh',
                 display: 'flex',
                 alignItems: 'center'
               }}

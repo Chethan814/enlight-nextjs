@@ -1,6 +1,4 @@
 'use client';
-
-import './GalleryStyle.css';
 import Breadcrumb from '@/app/components/common/Breadcrumb';
 import { GalleryGrid } from '@/app/components/features/Campus-Page/GalleryGrid';
 

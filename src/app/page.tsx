@@ -121,7 +121,7 @@ export default function Home() {
       <Facilities isClient={isClient} />
       <Testimonials />
       <BrandArea />
-      <GalleryGrid />
+      {/* <GalleryGrid /> */}
 
     </>
   )

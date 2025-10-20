@@ -167,7 +167,7 @@ const Header = () => {
                       src="/assets/img/logo/enlight-group-logo.png"
                       alt="Enlight Group"
                       fill
-                      className='main-logo !w-[19rem] !h-[19rem] !translate-y-[9px] !translate-x-[16px] !object-contain '
+                      className='main-logo !w-[18rem] !h-[18rem] !translate-y-[9px] !translate-x-[16px] !object-contain '
                       priority
                     />
                   </Link>
