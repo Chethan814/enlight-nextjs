@@ -63,20 +63,20 @@ const HeroBanner = () => {
           prevEl: '.swiper-button-prev',
         }}
         thumbs={{
-          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null, // ✅ fixed linking
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
         className="university__slider"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div
-              className="herobannerarea__single__slider"
+              className="herobannerarea__single__slider !h-[80vh] "
               style={{
                 backgroundImage: `url(${slide.bgImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                minHeight: '60vh',
+                minHeight: '80vh',
                 display: 'flex',
                 alignItems: 'center'
               }}
@@ -114,33 +114,35 @@ const HeroBanner = () => {
       </Swiper>
 
       {/* Thumbnail Slider */}
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={3}
-        watchSlidesProgress
-        modules={[Thumbs]} 
-        className="university__slider__thumb"
-      >
-        {slides.map((slide) => (
-          <SwiperSlide key={`thumb-${slide.id}`}>
-            <div
-              className="thumbnail-slide"
-              style={{
-                backgroundImage: `url(${slide.bgImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                width: '100%',
-                height: '80px',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                opacity: 0.7,
-                transition: 'opacity 0.3s ease',
-              }}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className='hidden md:block'>
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          spaceBetween={10}
+          slidesPerView={3}
+          watchSlidesProgress
+          modules={[Thumbs]}
+          className="university__slider__thumb"
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={`thumb-${slide.id}`}>
+              <div
+                className="thumbnail-slide"
+                style={{
+                  backgroundImage: `url(${slide.bgImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  width: '100%',
+                  height: '80px',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  opacity: 0.7,
+                  transition: 'opacity 0.3s ease',
+                }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       {/* Navigation Controls (optional)
       <div className="slider__controls__wrap slider__controls__pagination slider__controls__arrows">
