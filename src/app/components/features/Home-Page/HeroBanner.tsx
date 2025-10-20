@@ -62,7 +62,9 @@ const HeroBanner = () => {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
-        thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
+        thumbs={{
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null, // ✅ fixed linking
+        }}
         className="university__slider"
       >
         {slides.map((slide) => (
@@ -117,6 +119,7 @@ const HeroBanner = () => {
         spaceBetween={10}
         slidesPerView={3}
         watchSlidesProgress
+        modules={[Thumbs]} 
         className="university__slider__thumb"
       >
         {slides.map((slide) => (
@@ -139,15 +142,16 @@ const HeroBanner = () => {
         ))}
       </Swiper>
 
-      {/* Navigation Controls */}
-      {/* <div className="slider__controls__wrap slider__controls__pagination slider__controls__arrows">
+      {/* Navigation Controls (optional)
+      <div className="slider__controls__wrap slider__controls__pagination slider__controls__arrows">
         <div className="swiper-button-next arrow-btn">
           <i className="icofont-long-arrow-right"></i>
         </div>
         <div className="swiper-button-prev arrow-btn">
           <i className="icofont-long-arrow-left"></i>
         </div>
-      </div> */}
+      </div>
+      */}
     </div>
   );
 };
